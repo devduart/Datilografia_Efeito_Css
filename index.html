@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+	<!-- Font Special Elite -->
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+	<title>Datilografia Efeito Css</title>
+</head>
+<style>
+	/* Reset CSS */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		background: rgba(25, 25, 25);
+	}
+
+	.linha{
+		border-right: 2px solid rgba(255, 255, 255, 0.75);
+		color: rgba(255, 255, 255, 0.75);
+		font-family: 'Special Elite', monospace;
+		font-size: 3em;
+		text-align: center;
+		margin: 0 auto;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.digitando-animation {
+		animation: piscarCursor 500ms steps(40) infinite normal, digitando 4s steps(40) 1s normal both;
+	}
+	@keyframes digitando{
+		from{
+			width: 0;
+		}
+		to{
+			width: 13em;
+		}
+	}
+	@keyframes piscarCursor{
+		from {
+			border-right-color:  rgba(255, 255, 255, .75);
+		}
+		to{
+			border-right-color:  transparent;
+		}
+	}
+</style>
+
+<p class="linha digitando-animation">Olá, eu sou Dev Duarte! =)</p>
+</body>
+</html>
